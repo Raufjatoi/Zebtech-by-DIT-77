@@ -9,19 +9,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <style>
         body {
-            transition: background-color 0.3s, color 0.3s;
             background-color: #ffffff; /* Default background color set to white */
             color: #000000; /* Default text color set to black */
-        }
-        body.dark-mode {
-            background-color: #121212; /* Dark mode background */
-            color: #ffffff; /* Dark mode text color */
-        }
-        #modeToggle {
-            position: fixed;
-            top: 85px;
-            right: 20px;
-            z-index: 1000;
         }
         footer {
             text-align: center;
@@ -31,31 +20,17 @@
             bottom: 0;
             width: 100%;
         }
-        body.dark-mode footer {
-            background-color: #1e1e1e; /* Dark mode footer */
-        }
         .card {
-            transition: background-color 0.3s, color 0.3s;
             background-color: #ffffff; /* Light mode card background */
             color: #000000; /* Light mode card text color */
             margin-bottom: 20px; /* Space between card blocks */
         }
-        body.dark-mode .card {
-            background-color: #2a2a2a; /* Dark mode card background */
-            color: #ffffff; /* Dark mode card text color */
-        }
         nav {
-            transition: background-color 0.3s, color 0.3s;
             background-color: #f8f9fa; /* Light mode nav background */
-        }
-        body.dark-mode nav {
-            background-color: #1e1e1e; /* Dark mode nav background */
-            color: #ffffff; /* Dark mode nav text color */
         }
     </style>
 </head>
 <body>
-    <button id="modeToggle" class="btn btn-secondary">🌙</button>
 
     <nav class="navbar navbar-expand-lg navbar-light">
         <a class="navbar-brand" href="#">
@@ -76,7 +51,7 @@
                 </li>
                 <li class="nav-item"><a class="nav-link" href="information.html">Information</a></li>
                 <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Career</a></li>
+                <li class="nav-item"><a class="nav-link" href="job.html">Career</a></li>
             </ul>
         </div>
     </nav>
@@ -143,13 +118,6 @@
     <footer>
         <p>© 2024 ZABTech Institute. All rights reserved. | <a href="dit.html">DIT</a></p>
     </footer>
-    <script>
-        const modeToggle = document.getElementById('modeToggle');
-        modeToggle.addEventListener('click', () => {
-            document.body.classList.toggle('dark-mode');
-            modeToggle.textContent = document.body.classList.contains('dark-mode') ? '🌞' : '🌙';
-        });
-    </script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>

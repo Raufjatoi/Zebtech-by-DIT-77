@@ -8,42 +8,20 @@
     <link rel="icon" href="logo.png" type="image/png"> <!-- Added logo as favicon -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <style>
-        /* Additional styles for light and dark mode */
+        /* Styles for light mode only */
         body {
+            background-color: #ffffff; /* Light background */
+            color: #000000; /* Dark text color */
             transition: background-color 0.3s, color 0.3s;
         }
-        body.dark-mode {
-            background-color: #121212; /* Dark background for dark mode */
-            color: #ffffff; /* Light text color for dark mode */
-        }
-        body.light-mode {
-            background-color: #ffffff; /* Light background for light mode */
-            color: #000000; /* Dark text color for light mode */
-        }
-        /* Navbar styles for light and dark mode */
+        /* Navbar styles */
         .navbar {
+            background-color: #f8f9fa; /* Light background for navbar */
+            color: #000000; /* Dark text color for navbar */
             transition: background-color 0.3s, color 0.3s;
         }
-        body.dark-mode .navbar {
-            background-color: #1e1e1e; /* Dark background for navbar in dark mode */
-            color: #ffffff; /* Light text color for navbar in dark mode */
-        }
-        body.light-mode .navbar {
-            background-color: #f8f9fa; /* Light background for navbar in light mode */
-            color: #000000; /* Dark text color for navbar in light mode */
-        }
-        body.dark-mode .navbar-nav .nav-link {
-            color: #ffffff; /* White text color for nav links in dark mode */
-        }
-        body.light-mode .navbar-nav .nav-link {
-            color: #000000; /* Black text color for nav links in light mode */
-        }
-        /* Positioning the sun/moon icon */
-        #modeToggle {
-            position: fixed;
-            top: 85px; /* Adjusted to be 5px below the navbar */
-            right: 20px; /* Changed to right */
-            z-index: 1000; /* Ensure it stays on top */
+        .navbar-nav .nav-link {
+            color: #000000; /* Black text color for nav links */
         }
         /* Footer styles */
         footer {
@@ -54,28 +32,14 @@
             bottom: 0;
             width: 100%;
         }
-        body.dark-mode footer {
-            background-color: #1e1e1e; /* Dark background for footer in dark mode */
-        }
-        body.light-mode footer {
-            background-color: #f8f9fa; /* Light background for footer in light mode */
-        }
         .card {
+            background-color: #ffffff; /* Light background for cards */
+            color: #000000; /* Dark text color for cards */
             transition: background-color 0.3s, color 0.3s;
-        }
-        body.dark-mode .card {
-            background-color: #2a2a2a; /* Dark background for cards in dark mode */
-            color: #ffffff; /* Text color for cards in dark mode */
-        }
-        body.light-mode .card {
-            background-color: #ffffff; /* Light background for cards in light mode */
-            color: #000000; /* Dark text color for cards in light mode */
         }
     </style>
 </head>
-<body class="light-mode">
-    <button id="modeToggle" class="btn btn-secondary">🌙</button>
-
+<body>
     <nav class="navbar navbar-expand-lg navbar-light">
         <a class="navbar-brand" href="#">
             <img src="logo.png" alt="ZABTech Logo" style="width: 150px; height: auto;"> <!-- Added logo image -->
@@ -210,15 +174,6 @@
     <footer>
         <p>© 2024 ZABTech Institute. All rights reserved. | <a href="dit.html">DIT</a></p>
     </footer>
-
-    <script>
-        const modeToggle = document.getElementById('modeToggle');
-        modeToggle.addEventListener('click', () => {
-            document.body.classList.toggle('dark-mode');
-            document.body.classList.toggle('light-mode');
-            modeToggle.textContent = document.body.classList.contains('dark-mode') ? '🌞' : '🌙';
-        });
-    </script>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>

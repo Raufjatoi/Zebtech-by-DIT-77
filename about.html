@@ -9,21 +9,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <style>
         body {
+            background-color: #ffffff; /* Light background */
+            color: #000000; /* Dark text color */
             transition: background-color 0.3s, color 0.3s;
-        }
-        body.dark-mode {
-            background-color: #121212;
-            color: #ffffff;
-        }
-        body.light-mode {
-            background-color: #ffffff;
-            color: #000000;
-        }
-        #modeToggle {
-            position: fixed;
-            top: 85px;
-            right: 20px;
-            z-index: 1000;
         }
         footer {
             text-align: center;
@@ -34,27 +22,18 @@
             width: 100%;
             color: #000000; /* Default text color for footer */
         }
-        body.dark-mode footer {
-            background-color: #1e1e1e; /* Dark background for footer in dark mode */
-            color: #ffffff; /* White text color for footer in dark mode */
-        }
         nav {
             background-color: #f8f9fa; /* Default background for navbar */
         }
-        body.dark-mode nav {
-            background-color: #1e1e1e; /* Dark background for navbar in dark mode */
-        }
         nav .nav-link {
-            color: #000000; /* Default text color for nav links in light mode */
+            color: #0056b3; /* Updated text color for nav links */
         }
-        body.dark-mode nav .nav-link {
-            color: #ffffff; /* White text color for nav links in dark mode */
+        body nav .nav-link:hover {
+            color: #007bff; /* Change hover color for nav links */
         }
     </style>
 </head>
-<body class="light-mode">
-    <button id="modeToggle" class="btn btn-secondary">🌙</button>
-
+<body>
     <nav class="navbar navbar-expand-lg navbar-light">
         <a class="navbar-brand" href="#">
             <img src="logo.png" alt="ZABTech Logo" style="width: 150px; height: auto;">
@@ -74,7 +53,7 @@
                 </li>
                 <li class="nav-item"><a class="nav-link" href="information.html">Information</a></li>
                 <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
-                <li class="nav-item"><a class="nav-link" href="">Career</a></li>
+                <li class="nav-item"><a class="nav-link" href="internships.html">Career</a></li>
             </ul>
         </div>
     </nav>
@@ -88,15 +67,6 @@
     <footer>
         <p>© 2024 ZABTech Institute. All rights reserved. | <a href="dit.html">DIT</a></p>
     </footer>
-
-    <script>
-        const modeToggle = document.getElementById('modeToggle');
-        modeToggle.addEventListener('click', () => {
-            document.body.classList.toggle('dark-mode');
-            document.body.classList.toggle('light-mode');
-            modeToggle.textContent = document.body.classList.contains('dark-mode') ? '🌞' : '🌙';
-        });
-    </script>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
