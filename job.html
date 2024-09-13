@@ -3,12 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About ZABTech Institute</title>
+    <title>Job Openings - ZABTech Institute</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="icon" href="logo.png" type="image/png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <style>
         body {
+            transition: background-color 0.3s, color 0.3s;
+        }
+        body.light-mode {
             background-color: #ffffff;
             color: #000000;
         }
@@ -23,40 +26,43 @@
             z-index: 1000;
         }
         nav {
+            transition: background-color 0.3s, color 0.3s;
+        }
+        body.light-mode nav {
             background-color: #f8f9fa;
+            color: #000000;
         }
         body.dark-mode nav {
             background-color: #1e1e1e;
+            color: #ffffff;
         }
         footer {
             text-align: center;
             padding: 20px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        body.light-mode footer {
             background-color: #f8f9fa;
-            position: relative;
-            bottom: 0;
-            width: 100%;
+            color: #000000;
         }
         body.dark-mode footer {
             background-color: #1e1e1e;
             color: #ffffff;
         }
-        .info-section {
-            margin: 20px 0;
+        .card {
+            transition: background-color 0.3s, color 0.3s;
         }
-        .info-image {
-            width: 100%;
-            height: auto;
-            border-radius: 10px;
+        body.light-mode .card {
+            background-color: #ffffff;
+            color: #000000;
         }
-        .ai-image {
-            width: 100%;
-            height: auto;
-            border-radius: 10px;
-            margin-top: 20px;
+        body.dark-mode .card {
+            background-color: #2a2a2a;
+            color: #ffffff;
         }
     </style>
 </head>
-<body>
+<body class="light-mode">
     <button id="modeToggle" class="btn btn-secondary">🌙</button>
 
     <nav class="navbar navbar-expand-lg navbar-light">
@@ -83,30 +89,41 @@
         </div>
     </nav>
 
+    
     <div class="container text-center my-5">
-        <h1 class="display-4 text-primary font-weight-bold">About ZABTech Institute</h1>
-        <p class="lead text-secondary">ZABTech Institute was founded with the support of German educational initiatives, aiming to provide quality technical education in Pakistan.</p>
-        <img src="zeb.png" alt="ZABTech Institute" class="info-image">
-        <img src="ai.jpg" alt="AI Generated ZABTech" class="ai-image">
-        <div class="info-section">
-            <h3 class="text-muted my-4">Our Vision</h3>
-            <p>Named after the shaeed Zulfiqar Ali Bhutto, ZABTech Institute is dedicated to empowering students through innovative learning and skill development.</p>
+        <h1 class="display-4 text-primary font-weight-bold">Job Openings at ZABTech Institute</h1>
+        <p class="lead text-secondary">Explore our current job opportunities and join our team.</p>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card border-0 shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title">Software Developer</h5>
+                        <p class="card-text">Looking for a skilled developer to join our tech team.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card border-0 shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title">Data Analyst</h5>
+                        <p class="card-text">Seeking a detail-oriented analyst to interpret data.</p>
+                    </div>
+                </div>
+            </div>
         </div>
-        
+    </div>
+
     <footer>
         <p>© 2024 ZABTech Institute. All rights reserved. | <a href="dit.html">DIT</a></p>
     </footer>
-
     <script>
         const modeToggle = document.getElementById('modeToggle');
         modeToggle.addEventListener('click', () => {
-            document.body.classList.toggle('dark-mode');
-            modeToggle.textContent = document.body.classList.contains('dark-mode') ? '🌞' : '🌙';
+            const isDarkMode = document.body.classList.toggle('dark-mode');
+            document.body.classList.toggle('light-mode', !isDarkMode);
+            modeToggle.textContent = isDarkMode ? '🌞' : '🌙';
         });
     </script>
-
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-</body>
-</html>

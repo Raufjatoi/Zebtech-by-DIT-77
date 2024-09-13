@@ -3,21 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Scholarships - ZABTech Institute</title>
+    <title>Internships - ZABTech Institute</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="icon" href="logo.png" type="image/png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <style>
         body {
             transition: background-color 0.3s, color 0.3s;
+            background-color: #ffffff; /* Default background color set to white */
+            color: #000000; /* Default text color set to black */
         }
         body.dark-mode {
-            background-color: #121212;
-            color: #ffffff;
-        }
-        body.light-mode {
-            background-color: #ffffff;
-            color: #000000;
+            background-color: #121212; /* Dark mode background */
+            color: #ffffff; /* Dark mode text color */
         }
         #modeToggle {
             position: fixed;
@@ -25,52 +23,43 @@
             right: 20px;
             z-index: 1000;
         }
-        nav {
-            transition: background-color 0.3s, color 0.3s;
-        }
-        body.dark-mode nav {
-            background-color: #1e1e1e;
-            color: #ffffff;
-        }
-        body.light-mode nav {
-            background-color: #f8f9fa;
-            color: #000000;
-        }
         footer {
             text-align: center;
             padding: 20px;
+            background-color: #f8f9fa; /* Light mode footer */
             position: relative;
             bottom: 0;
             width: 100%;
-            transition: background-color 0.3s, color 0.3s;
         }
         body.dark-mode footer {
-            background-color: #1e1e1e;
-            color: #ffffff;
-        }
-        body.light-mode footer {
-            background-color: #f8f9fa;
-            color: #000000;
+            background-color: #1e1e1e; /* Dark mode footer */
         }
         .card {
             transition: background-color 0.3s, color 0.3s;
+            background-color: #ffffff; /* Light mode card background */
+            color: #000000; /* Light mode card text color */
+            margin-bottom: 20px; /* Space between card blocks */
         }
         body.dark-mode .card {
-            background-color: #2a2a2a;
-            color: #ffffff;
+            background-color: #2a2a2a; /* Dark mode card background */
+            color: #ffffff; /* Dark mode card text color */
         }
-        body.light-mode .card {
-            background-color: #ffffff;
-            color: #000000;
+        nav {
+            transition: background-color 0.3s, color 0.3s;
+            background-color: #f8f9fa; /* Light mode nav background */
+        }
+        body.dark-mode nav {
+            background-color: #1e1e1e; /* Dark mode nav background */
+            color: #ffffff; /* Dark mode nav text color */
         }
     </style>
 </head>
-<body class="light-mode">
+<body>
     <button id="modeToggle" class="btn btn-secondary">🌙</button>
 
     <nav class="navbar navbar-expand-lg navbar-light">
         <a class="navbar-brand" href="#">
-            <img src="logo.png" alt="ZABTech Logo" style="width: 150px; height: auto;">
+            <img src="logo.png" alt="ZABTech Logo" class="img-fluid" style="max-width: 150px;">
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -93,53 +82,74 @@
     </nav>
 
     <div class="container text-center my-5">
-        <h1 class="display-4 text-primary font-weight-bold">Scholarships at ZABTech Institute</h1>
-        <p class="lead text-secondary">Explore our scholarship opportunities and learn how to apply.</p>
+        <h1 class="display-4 text-primary font-weight-bold">Internships at ZABTech Institute</h1>
+        <p class="lead text-secondary">Explore our current internship opportunities and join our team.</p>
         <div class="row">
             <div class="col-md-4">
                 <div class="card border-0 shadow-sm">
                     <div class="card-body">
-                        <h5 class="card-title">Merit-Based Scholarships</h5>
-                        <p class="card-text">Awarded to students with outstanding academic performance.</p>
+                        <h5 class="card-title">Python Developer</h5>
+                        <i class="fab fa-python fa-2x"></i>
+                        <p class="card-text">Join us as a Python Developer and work on exciting projects.</p>
                     </div>
                 </div>
             </div>
+
             <div class="col-md-4">
                 <div class="card border-0 shadow-sm">
                     <div class="card-body">
-                        <h5 class="card-title">Need-Based Scholarships</h5>
-                        <p class="card-text">Designed for students who demonstrate financial need.</p>
+                        <h5 class="card-title">Java Developer</h5>
+                        <i class="fab fa-java fa-2x"></i>
+                        <p class="card-text">Seeking a Java Developer to contribute to our innovative solutions.</p>
                     </div>
                 </div>
             </div>
+
             <div class="col-md-4">
                 <div class="card border-0 shadow-sm">
                     <div class="card-body">
-                        <h5 class="card-title">Special Talent Scholarships</h5>
-                        <p class="card-text">For students excelling in sports, arts, or other talents.</p>
+                        <h5 class="card-title">Web Developer</h5>
+                        <i class="fab fa-html5 fa-2x"></i>
+                        <i class="fab fa-css3-alt fa-2x"></i>
+                        <i class="fab fa-js fa-2x"></i>
+                        <p class="card-text">Become a Web Developer and create stunning websites.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card border-0 shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title">Game Developer</h5>
+                        <i class="fab fa-unity fa-2x"></i>
+                        <i class="fab fa-gamepad fa-2x"></i>
+                        <p class="card-text">Join us as a Game Developer and bring games to life.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card border-0 shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title">TensorFlow Developer</h5>
+                        <i class="fab fa-tensorflow fa-2x"></i>
+                        <p class="card-text">Work with TensorFlow to build machine learning models.</p>
                     </div>
                 </div>
             </div>
         </div>
-        <h3 class="text-muted my-4">How to Apply</h3>
-        <p>To apply for a scholarship, please visit our admissions office or fill out the online application form on our website. Ensure you submit all required documents before the deadline.</p>
     </div>
 
     <footer>
         <p>© 2024 ZABTech Institute. All rights reserved. | <a href="dit.html">DIT</a></p>
     </footer>
-
     <script>
         const modeToggle = document.getElementById('modeToggle');
         modeToggle.addEventListener('click', () => {
             document.body.classList.toggle('dark-mode');
-            document.body.classList.toggle('light-mode');
             modeToggle.textContent = document.body.classList.contains('dark-mode') ? '🌞' : '🌙';
         });
     </script>
-
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-</body>
-</html>

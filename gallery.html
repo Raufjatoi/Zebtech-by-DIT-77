@@ -8,6 +8,10 @@
     <link rel="icon" href="logo.png" type="image/png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <style>
+        body {
+            background-color: #ffffff; /* Default background color set to white */
+            color: #000000; /* Default text color set to black */
+        }
         body.dark-mode {
             background-color: #121212;
             color: #ffffff;
@@ -18,13 +22,32 @@
             right: 20px;
             z-index: 1000;
         }
+        nav {
+            transition: background-color 0.3s, color 0.3s;
+        }
+        body.dark-mode nav {
+            background-color: #1e1e1e;
+            color: #ffffff;
+        }
+        body.light-mode nav {
+            background-color: #f8f9fa;
+            color: #000000;
+        }
         footer {
             text-align: center;
             padding: 20px;
-            background-color: #f8f9fa;
             position: relative;
             bottom: 0;
             width: 100%;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        body.dark-mode footer {
+            background-color: #1e1e1e;
+            color: #ffffff;
+        }
+        body.light-mode footer {
+            background-color: #f8f9fa;
+            color: #000000;
         }
         .gallery-card {
             margin: 20px;
@@ -57,7 +80,7 @@
 <body>
     <button id="modeToggle" class="btn btn-secondary">🌙</button>
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-light">
         <a class="navbar-brand" href="#">
             <img src="logo.png" alt="ZABTech Logo" style="width: 150px; height: auto;">
         </a>
@@ -68,8 +91,8 @@
             <ul class="navbar-nav">
                 <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
                 <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Information</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Gallery</a></li>
+                <li class="nav-item"><a class="nav-link" href="information.html">Information</a></li>
+                <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
                 <li class="nav-item"><a class="nav-link" href="#">Career</a></li>
             </ul>
         </div>
@@ -114,28 +137,28 @@
         <div class="row">
             <div class="col-md-4">
                 <div class="gallery-card">
-                    <img src="project1.jpg" alt="Project 1" class="gallery-image">
+                    <img src="media/image0.png" alt="Project 1" class="gallery-image">
                     <div class="p-3">
-                        <p class="gallery-title">Project Title 1</p>
-                        <p class="gallery-description">Description of Project 1.</p>
+                        <p class="gallery-title">DIT 77 Final Project </p>
+                        <p class="gallery-description">An web application to play tic tac toe , chat with a logical bot or do text to speecch</p>
                     </div>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="gallery-card">
-                    <img src="project2.jpg" alt="Project 2" class="gallery-image">
+                    <img src="media/image1.png" alt="Project 2" class="gallery-image">
                     <div class="p-3">
-                        <p class="gallery-title">Project Title 2</p>
-                        <p class="gallery-description">Description of Project 2.</p>
+                        <p class="gallery-title">Multiple disease pridictor </p>
+                        <p class="gallery-description">A flask based application to predict the disease by asking user some question to get features and use those in machine learning model</p>
                     </div>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="gallery-card">
-                    <img src="project3.jpg" alt="Project 3" class="gallery-image">
+                    <img src="media/image2.png" alt="Project 3" class="gallery-image">
                     <div class="p-3">
-                        <p class="gallery-title">Project Title 3</p>
-                        <p class="gallery-description">Description of Project 3.</p>
+                        <p class="gallery-title">Object Detection app in java</p>
+                        <p class="gallery-description">A java based object detection app to detect object wheather the custom one or live using open sourse models like yolo v3 and yolo v4 </p>
                     </div>
                 </div>
             </div>
@@ -205,7 +228,7 @@
     </div>
 
     <footer>
-        <p>by <a href="dit.html">DIT 77</a></p>
+        <p>© 2024 ZABTech Institute. All rights reserved. | <a href="dit.html">DIT</a></p>
     </footer>
 
     <script>

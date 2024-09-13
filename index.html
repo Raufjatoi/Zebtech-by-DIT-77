@@ -8,12 +8,37 @@
     <link rel="icon" href="logo.png" type="image/png"> <!-- Added logo as favicon -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <style>
-        /* Additional styles for dark mode */
-        body.dark-mode {
-            background-color: #121212;
-            color: #ffffff;
+        /* Additional styles for light and dark mode */
+        body {
+            transition: background-color 0.3s, color 0.3s;
         }
-        /* Positioning the moon icon */
+        body.dark-mode {
+            background-color: #121212; /* Dark background for dark mode */
+            color: #ffffff; /* Light text color for dark mode */
+        }
+        body.light-mode {
+            background-color: #ffffff; /* Light background for light mode */
+            color: #000000; /* Dark text color for light mode */
+        }
+        /* Navbar styles for light and dark mode */
+        .navbar {
+            transition: background-color 0.3s, color 0.3s;
+        }
+        body.dark-mode .navbar {
+            background-color: #1e1e1e; /* Dark background for navbar in dark mode */
+            color: #ffffff; /* Light text color for navbar in dark mode */
+        }
+        body.light-mode .navbar {
+            background-color: #f8f9fa; /* Light background for navbar in light mode */
+            color: #000000; /* Dark text color for navbar in light mode */
+        }
+        body.dark-mode .navbar-nav .nav-link {
+            color: #ffffff; /* White text color for nav links in dark mode */
+        }
+        body.light-mode .navbar-nav .nav-link {
+            color: #000000; /* Black text color for nav links in light mode */
+        }
+        /* Positioning the sun/moon icon */
         #modeToggle {
             position: fixed;
             top: 85px; /* Adjusted to be 5px below the navbar */
@@ -29,12 +54,29 @@
             bottom: 0;
             width: 100%;
         }
+        body.dark-mode footer {
+            background-color: #1e1e1e; /* Dark background for footer in dark mode */
+        }
+        body.light-mode footer {
+            background-color: #f8f9fa; /* Light background for footer in light mode */
+        }
+        .card {
+            transition: background-color 0.3s, color 0.3s;
+        }
+        body.dark-mode .card {
+            background-color: #2a2a2a; /* Dark background for cards in dark mode */
+            color: #ffffff; /* Text color for cards in dark mode */
+        }
+        body.light-mode .card {
+            background-color: #ffffff; /* Light background for cards in light mode */
+            color: #000000; /* Dark text color for cards in light mode */
+        }
     </style>
 </head>
-<body>
+<body class="light-mode">
     <button id="modeToggle" class="btn btn-secondary">🌙</button>
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-light">
         <a class="navbar-brand" href="#">
             <img src="logo.png" alt="ZABTech Logo" style="width: 150px; height: auto;"> <!-- Added logo image -->
         </a>
@@ -51,11 +93,6 @@
                     <div class="dropdown-menu" aria-labelledby="aboutUsDropdown">
                         <a class="dropdown-item" href="about.html">About</a>
                         <a class="dropdown-item" href="leadership.html">Leadership</a>
-                        <!--<a class="dropdown-item" href="#">Our Team</a>
-                        <a class="dropdown-item" href="#">Organogram</a>
-                        <a class="dropdown-item" href="#">TVET Programs</a>
-                        <a class="dropdown-item" href="#">Recognition Of Prior Learning (RPL)</a>
-                        <a class="dropdown-item" href="#">Partnership and Collaboration</a>-->
                     </div>
                 </li>
                 <li class="nav-item dropdown">
@@ -88,8 +125,8 @@
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="careerDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Career</a>
                     <div class="dropdown-menu" aria-labelledby="careerDropdown">
-                        <a class="dropdown-item" href="#">Job Openings</a>
-                        <a class="dropdown-item" href="#">Internships</a>
+                        <a class="dropdown-item" href="job.html">Job Openings</a>
+                        <a class="dropdown-item" href="internships.html">Internships</a>
                     </div>
                 </li>
             </ul>
@@ -171,13 +208,14 @@
     </section>
 
     <footer>
-        <p>by <a href="dit.html">DIT 77</a></p>
+        <p>© 2024 ZABTech Institute. All rights reserved. | <a href="dit.html">DIT</a></p>
     </footer>
 
     <script>
         const modeToggle = document.getElementById('modeToggle');
         modeToggle.addEventListener('click', () => {
             document.body.classList.toggle('dark-mode');
+            document.body.classList.toggle('light-mode');
             modeToggle.textContent = document.body.classList.contains('dark-mode') ? '🌞' : '🌙';
         });
     </script>
